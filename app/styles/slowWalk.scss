@@ -1,0 +1,32 @@
+.slowWalk {
+  /*规定 @keyframes 动画的名称。*/
+  @include animation-name(person-slow);
+  /*规定动画完成一个周期所花费的秒或毫秒。默认是 0*/
+  @include animation-duration(950ms);
+  /*规定动画被播放的次数。默认是 1。 infinite(循环播放)*/
+  @include animation-iteration-count(infinite);
+  /*动画切换的方式是一帧一帧的改变*/
+  @include animation-timing-function(steps(1,start));
+}
+
+@include keyframes(person-slow) {
+  0% {
+    background-position: -0px -291px;
+  }
+  25% {
+    background-position: -602px -0px;
+  }
+  50% {
+    background-position: -302px -291px;
+  }
+  75% {
+    background-position: -151px -291px;
+  }
+  100% {
+    background-position: -0px -291px;
+  }
+}
+/*人物暂停*/
+.pauseWalk{
+  @include animation-play-state(paused);
+}

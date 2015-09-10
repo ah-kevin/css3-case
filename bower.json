@@ -1,0 +1,9 @@
+{
+  "name": "app",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "jquery.transit": "~0.9.12",
+    "modernizr": "~2.8.1"
+  }
+}

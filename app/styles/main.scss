@@ -1,0 +1,62 @@
+$icon-font-path: '../fonts/';
+*{
+  margin: 0;
+  padding: 0;
+}
+// bower:scss
+// endbower
+@import "normalize";
+@import "compass/reset/utilities";
+@import "compass/css3";
+
+ul,li{
+  @include reset-list-style;
+}
+
+/*! Main.css*/
+#content{
+  width: 100%;
+  height: 100%;
+  //top: 20%;
+  //left: 20%;
+  overflow:hidden;
+  position: absolute;
+  border: 1px solid #CCCCCC;
+}
+.content-wrap{
+  position: relative;
+  li{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #CAE1FF;
+    float: left;
+    position: relative;
+    &:nth-child(2){
+      background: #9bcd9b;
+    }
+    &:nth-child(3){
+      background: yellow;
+    }
+  }
+}
+button{
+  width: 100px;
+  height: 50px;
+}
+.button{
+  position: absolute;
+  bottom: 0;
+}
+/*人的雪碧图*/
+.charector {
+  width: 151px;
+  height: 291px;
+  background: url(../images/boy.png) -0px -291px no-repeat;
+  position: absolute;
+  //设置一个元素的坐标
+  top:55%;
+  left: 6%;
+}
+@import "pageA";
+@import "slowWalk";

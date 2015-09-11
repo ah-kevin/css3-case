@@ -311,6 +311,153 @@ button {
   background-size: 100% 100%;
 }
 
+/*太阳自传跟动画*/
+#sun {
+  background-image: url(../images/sun.png);
+  position: absolute;
+  z-index: 1;
+  top: -30px;
+  height: 201px;
+  width: 201px;
+  right: 40%;
+}
+
+.rotation {
+  -moz-animation-name: rotation;
+  -webkit-animation-name: rotation;
+  animation-name: rotation;
+  -moz-animation-duration: 30s;
+  -webkit-animation-duration: 30s;
+  animation-duration: 30s;
+}
+
+@-moz-keyframes rotation {
+  0% {
+    -moz-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  100% {
+    -moz-transform: translate(-2000px, 400px);
+    transform: translate(-2000px, 400px);
+  }
+}
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-2000px, 400px);
+    transform: translate(-2000px, 400px);
+  }
+}
+@keyframes rotation {
+  0% {
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  100% {
+    -moz-transform: translate(-2000px, 400px);
+    -ms-transform: translate(-2000px, 400px);
+    -webkit-transform: translate(-2000px, 400px);
+    transform: translate(-2000px, 400px);
+  }
+}
+/*云动画*/
+.cloud {
+  z-index: 2;
+  position: absolute;
+}
+
+.cloud1 {
+  width: 181px;
+  height: 101px;
+  left: -5%;
+  top: 15%;
+  background: url(../images/cloud1.png);
+}
+
+.cloud2 {
+  width: 301px;
+  height: 140px;
+  right: -5%;
+  background: url(../images/cloud2.png);
+}
+
+.cloud1Anim {
+  -moz-animation-name: smallCloud;
+  -webkit-animation-name: smallCloud;
+  animation-name: smallCloud;
+  -moz-animation-duration: 30s;
+  -webkit-animation-duration: 30s;
+  animation-duration: 30s;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.cloud2Anim {
+  -moz-animation-name: largeCloud;
+  -webkit-animation-name: largeCloud;
+  animation-name: largeCloud;
+  -moz-animation-duration: 60s;
+  -webkit-animation-duration: 60s;
+  animation-duration: 60s;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-moz-keyframes smallCloud {
+  0% {
+    left: -5%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@-webkit-keyframes smallCloud {
+  0% {
+    left: -5%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes smallCloud {
+  0% {
+    left: -5%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@-moz-keyframes largeCloud {
+  0% {
+    left: -5%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@-webkit-keyframes largeCloud {
+  0% {
+    left: -5%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes largeCloud {
+  0% {
+    left: -5%;
+  }
+  100% {
+    left: 100%;
+  }
+}
 .slowWalk {
   /*规定 @keyframes 动画的名称。*/
   -moz-animation-name: person-slow;

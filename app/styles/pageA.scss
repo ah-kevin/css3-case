@@ -29,3 +29,75 @@
     size:100% 100%;
   };
 }
+/*太阳自传跟动画*/
+#sun{
+  background: {
+    image: url(../images/sun.png);
+  };
+  position: absolute;
+  z-index: 1;
+  top: -30px;
+  height: 201px;
+  width: 201px;
+  right: 40%;
+}
+.rotation{
+  @include animation-name(rotation);
+  @include animation-duration(30s);
+}
+@include keyframes(rotation){
+0%{
+  @include translate(0,0);
+}
+  100%{
+    @include translate(-2000px,400px)
+  }
+}
+/*云动画*/
+
+.cloud {
+  z-index: 2;
+  position: absolute;
+}
+
+.cloud1 {
+  width: 181px;
+  height: 101px;
+  left: -5%;
+  top: 15%;
+  background: url(../images/cloud1.png);
+}
+
+
+.cloud2 {
+  width: 301px;
+  height: 140px;
+  right: -5%;
+  background: url(../images/cloud2.png);
+}
+.cloud1Anim{
+  @include animation-name(smallCloud);
+  @include animation-duration(30s);
+  @include animation-iteration-count(infinite);
+}
+.cloud2Anim{
+  @include animation-name(largeCloud);
+  @include animation-duration(60s);
+  @include animation-iteration-count(infinite);
+}
+@include keyframes(smallCloud){
+  0%{
+    left: -5%;
+  }
+  100%{
+    left: 100%;
+  }
+}
+@include keyframes(largeCloud){
+  0%{
+    left: -5%;
+  }
+  100%{
+    left: 100%;
+  }
+}
